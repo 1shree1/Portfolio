@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function About() {
   return (
@@ -20,7 +20,7 @@ export default function About() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="max-w-3xl text-lg sm:text-xl text-center mb-10"
       >
-        Hi, I'm <span className="text-red-500 font-semibold">Shree</span>, a
+        Hi, I&apos;m <span className="text-red-500 font-semibold">Shree</span>, a
         passionate Frontend Developer who loves building beautiful and
         interactive web interfaces. I have worked on multiple projects using{" "}
         <span className="text-red-500 font-medium">HTML, CSS, JavaScript</span>{" "}

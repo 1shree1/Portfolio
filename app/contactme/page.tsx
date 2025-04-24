@@ -25,7 +25,7 @@ export default function ContactMe() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="text-lg sm:text-xl text-center max-w-xl mb-10 text-gray-300"
       >
-        I'd love to connect with you! Whether it's for a project, opportunity, or just to say hi.
+        I&apos;d love to connect with you! Whether it&apos;s for a project, opportunity, or just to say hi.
       </motion.p>
 
       <motion.div

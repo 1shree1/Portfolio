@@ -1,22 +1,11 @@
 import type { Metadata } from "next";
-import { Outfit, Ovo } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/component/theme-provider";
+// import { ThemeProvider } from "@/component/theme-provider";
 import { ReactNode } from "react";
 
-interface RootLayoutProps {
-  children: ReactNode;
-}
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
-const ovo = Ovo({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+
+
 
 export const metadata: Metadata = {
   title: "Portfolio - Shree",
@@ -27,18 +16,18 @@ export const metadata: Metadata = {
 // app/layout.tsx
 
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
           {children}
-        </ThemeProvider>
+        </ThemeProvider> */}
       </body>
     </html>
   )
