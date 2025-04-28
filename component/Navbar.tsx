@@ -60,7 +60,7 @@ const Navbar = () => {
         </button>
 
         {/* Mobile Menu Button */}
-        <button
+        {/* <button
           type="button"
           className="block md:hidden text-white"
           onClick={toggleMenu}
@@ -74,7 +74,7 @@ const Navbar = () => {
             className="cursor-pointer glow-logo"
             priority
           />
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu */}

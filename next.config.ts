@@ -1,9 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
+  output: 'export',
   images: {
-    domains: ['your-image-domain.com'],
+    unoptimized: true,
   },
   webpack(config) {
     return config;
