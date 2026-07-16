@@ -88,7 +88,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className="grid gap-5"
+      className="grid gap-4 sm:gap-5"
       noValidate
       onSubmit={handleSubmit}
       aria-describedby={formState.message ? messageId : undefined}
@@ -99,7 +99,7 @@ export default function ContactForm() {
       </div>
 
       <div className="grid gap-2">
-        <label htmlFor="name" className="text-sm font-black uppercase tracking-[0.14em] text-white">
+        <label htmlFor="name" className="text-xs font-black uppercase tracking-[0.12em] text-white sm:text-sm sm:tracking-[0.14em]">
           Name
         </label>
         <input
@@ -108,13 +108,13 @@ export default function ContactForm() {
           type="text"
           autoComplete="name"
           required
-          className="min-h-12 rounded-md border border-white/12 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-[#929292] focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30"
+          className="min-h-11 rounded-md border border-white/12 bg-white/[0.04] px-3.5 text-sm text-white outline-none transition placeholder:text-[#929292] focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30 sm:min-h-12 sm:px-4 sm:text-base"
           placeholder="Your name"
         />
       </div>
 
       <div className="grid gap-2">
-        <label htmlFor="email" className="text-sm font-black uppercase tracking-[0.14em] text-white">
+        <label htmlFor="email" className="text-xs font-black uppercase tracking-[0.12em] text-white sm:text-sm sm:tracking-[0.14em]">
           Email
         </label>
         <input
@@ -123,13 +123,13 @@ export default function ContactForm() {
           type="email"
           autoComplete="email"
           required
-          className="min-h-12 rounded-md border border-white/12 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-[#929292] focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30"
+          className="min-h-11 rounded-md border border-white/12 bg-white/[0.04] px-3.5 text-sm text-white outline-none transition placeholder:text-[#929292] focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30 sm:min-h-12 sm:px-4 sm:text-base"
           placeholder="you@domain.com"
         />
       </div>
 
       <div className="grid gap-2">
-        <label htmlFor="projectType" className="text-sm font-black uppercase tracking-[0.14em] text-white">
+        <label htmlFor="projectType" className="text-xs font-black uppercase tracking-[0.12em] text-white sm:text-sm sm:tracking-[0.14em]">
           Project type
         </label>
         <select
@@ -137,7 +137,7 @@ export default function ContactForm() {
           name="projectType"
           required
           defaultValue=""
-          className="min-h-12 rounded-md border border-white/12 bg-[#111111] px-4 text-white outline-none transition focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30"
+          className="min-h-11 rounded-md border border-white/12 bg-[#111111] px-3.5 text-sm text-white outline-none transition focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30 sm:min-h-12 sm:px-4 sm:text-base"
         >
           <option value="" disabled>
             Select a project type
@@ -151,15 +151,15 @@ export default function ContactForm() {
       </div>
 
       <div className="grid gap-2">
-        <label htmlFor="description" className="text-sm font-black uppercase tracking-[0.14em] text-white">
+        <label htmlFor="description" className="text-xs font-black uppercase tracking-[0.12em] text-white sm:text-sm sm:tracking-[0.14em]">
           Project description
         </label>
         <textarea
           id="description"
           name="description"
           required
-          rows={6}
-          className="min-h-36 resize-y rounded-md border border-white/12 bg-white/[0.04] px-4 py-3 text-white outline-none transition placeholder:text-[#929292] focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30"
+          rows={4}
+          className="min-h-28 resize-y rounded-md border border-white/12 bg-white/[0.04] px-3.5 py-3 text-sm text-white outline-none transition placeholder:text-[#929292] focus:border-[#FF2A1A] focus:ring-2 focus:ring-[#FF2A1A]/30 sm:min-h-36 sm:px-4 sm:text-base"
           placeholder="Tell me what you are building, who it is for, and what result you need."
         />
       </div>

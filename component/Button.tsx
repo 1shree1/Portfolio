@@ -10,7 +10,7 @@ const variants: Record<ButtonVariant, string> = {
   secondary:
     "border border-white/20 bg-white text-[#080808] hover:border-white hover:bg-[#F3F1ED]",
   dark:
-    "border border-black/15 bg-[#080808] text-white hover:bg-[#E10600] hover:border-[#E10600]",
+    "dark-cta border border-black/15 bg-[#080808] text-white hover:bg-[#E10600] hover:border-[#E10600]",
   ghost:
     "border border-white/15 bg-white/[0.03] text-white hover:border-[#E10600] hover:bg-[#E10600]/12",
 };
@@ -31,7 +31,7 @@ export function ButtonLink({
   return (
     <a
       className={cn(
-        "group inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-black uppercase tracking-[0.12em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]",
+        "group inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-xs font-black uppercase tracking-[0.1em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm sm:tracking-[0.12em]",
         variants[variant],
         className,
       )}
@@ -45,7 +45,7 @@ export function ButtonLink({
 
 export function buttonClassName(variant: ButtonVariant = "primary", className?: string) {
   return cn(
-    "inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-black uppercase tracking-[0.12em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]",
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 py-2.5 text-xs font-black uppercase tracking-[0.1em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm sm:tracking-[0.12em]",
     variants[variant],
     className,
   );

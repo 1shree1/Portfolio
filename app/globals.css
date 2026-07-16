@@ -64,6 +64,22 @@ canvas {
   max-width: 100%;
 }
 
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.dark-cta {
+  color: #ffffff;
+}
+
+.dark-cta > * {
+  color: currentColor;
+}
+
 ::selection {
   background: var(--color-red);
   color: var(--color-white);

@@ -5,7 +5,7 @@ import { Container } from "@/component/Container";
 export default function AnnouncementBar() {
   return (
     <div className="relative z-50 border-b border-white/10 bg-[#E10600] text-white">
-      <Container className="flex min-h-10 flex-col items-center justify-center gap-1 py-2 text-center text-[0.7rem] font-black uppercase tracking-[0.18em] sm:min-h-9 sm:flex-row sm:justify-between sm:text-xs">
+      <Container className="flex min-h-9 flex-col items-center justify-center gap-0.5 py-1.5 text-center text-[0.62rem] font-black uppercase tracking-[0.14em] sm:min-h-9 sm:flex-row sm:justify-between sm:text-xs sm:tracking-[0.18em]">
         <span>Open to freelance projects and collaborations</span>
         <Link
           href="/#contact"
