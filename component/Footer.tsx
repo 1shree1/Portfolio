@@ -1,77 +1,78 @@
-'use client';
+"use client";
 
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import { Container } from "@/component/Container";
+import { contactLinks, navItems, site } from "@/lib/site-data";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="relative bg-black text-white overflow-hidden">
-      {/* Blood-red wave divider */}
-      <svg className="absolute top-0 left-0 w-full" viewBox="0 0 1440 100" preserveAspectRatio="none">
-        <path fill="#8B0000" d="M0,64L1440,0L1440,320L0,320Z" />
-      </svg>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* About Section */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className="text-red-700 text-xl font-semibold mb-4 animate-pulse text-shadow">About Me</h3>
-          <p className="text-gray-300 text-sm">
-            I specialize in creating spooky, fast, and scalable digital experiences. Using technologies like React, Next.js, and Tailwind CSS, I bring dark visions to life.
+    <footer className="border-t border-white/10 bg-[#080808] text-white">
+      <Container className="grid gap-10 py-12 md:grid-cols-[1.1fr_0.9fr_1fr]">
+        <div>
+          <Link
+            href="/#top"
+            className="inline-flex items-center gap-3 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
+            aria-label="Shree Subedi home"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-sm font-black text-[#080808]">
+              SS
+            </span>
+            <span className="text-sm font-black uppercase tracking-[0.18em]">Shree Subedi</span>
+          </Link>
+          <p className="mt-5 max-w-sm text-sm leading-7 text-[#D5D5D5]">
+            Fast, modern, and conversion-focused websites for businesses, startups,
+            and personal brands.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Links Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <h3 className="text-red-700 text-xl font-semibold mb-4 animate-pulse text-shadow">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            {[ 'MyWork', 'Services', 'About'].map((link, index) => (
-              <li key={index}>
-                <a href={`${link.toLowerCase()}`} className="hover:text-red-500 transition-all duration-200 text-shadow hover:text-shadow">
-                  {link}
+        <nav aria-label="Footer navigation">
+          <h2 className="text-xs font-black uppercase tracking-[0.24em] text-[#929292]">Navigation</h2>
+          <ul className="mt-5 grid gap-3 text-sm font-bold text-[#D5D5D5]">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="transition hover:text-[#FF2A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2A1A]"
+                >
+                  {item.label}
                 </a>
               </li>
             ))}
           </ul>
-        </motion.div>
+        </nav>
 
-        {/* Social Media */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h3 className="text-red-700 text-xl font-semibold mb-4 animate-pulse text-shadow">Stay Connected</h3>
-          <div className="flex space-x-6 justify-center">
-            <a href="https://github.com/1shree1" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 text-xl text-white hover:text-red-500 hover:text-shadow">
-              <FaGithub />
-            </a>
-            <a href="https://www.linkedin.com/in/shree-subedi-b59836284/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 text-xl text-white hover:text-red-500 hover:text-shadow">
-              <FaLinkedin />
-            </a>
-            <a href="https://x.com/Ksubedi306Shree" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 text-xl text-white hover:text-red-500 hover:text-shadow">
-              <FaTwitter />
-            </a>
-            <a href="https://www.instagram.com/s_h_r_e_e_306/?hl=en" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 text-xl text-white hover:text-red-500 hover:text-shadow">
-              <FaInstagram />
-            </a>
-          </div>
-        </motion.div>
+        <div>
+          <h2 className="text-xs font-black uppercase tracking-[0.24em] text-[#929292]">Connect</h2>
+          <ul className="mt-5 grid gap-3 text-sm font-bold text-[#D5D5D5]">
+            {contactLinks.map((link) => {
+              const Icon = link.icon;
+
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="inline-flex items-center gap-2 break-all transition hover:text-[#FF2A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2A1A]"
+                  >
+                    <Icon className="h-4 w-4 text-[#E10600]" aria-hidden />
+                    {link.label === "Email" ? site.email : link.label}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </Container>
+
+      <div className="border-t border-white/10 py-5">
+        <Container className="flex flex-col gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#929292] sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {year} Shree Subedi. All rights reserved.</p>
+          <p>Built with Next.js</p>
+        </Container>
       </div>
-
-      <div className="border-t border-red-900 text-center text-sm text-gray-400 py-6 text-shadow">
-        &copy; {new Date().getFullYear()} Shree Subedi. All rights reserved.
-      </div>
-
-      {/* Foggy overlay for spooky effect */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 z-0"></div>
     </footer>
   );
 }

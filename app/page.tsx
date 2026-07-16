@@ -1,21 +1,35 @@
+import AboutSection from "@/component/AboutSection";
+import AnnouncementBar from "@/component/AnnouncementBar";
+import ContactSection from "@/component/ContactSection";
+import Footer from "@/component/Footer";
+import Hero from "@/component/Hero";
 import Navbar from "@/component/Navbar";
+import OpportunitySection from "@/component/OpportunitySection";
+import PrinciplesSection from "@/component/PrinciplesSection";
+import ProcessSection from "@/component/ProcessSection";
+import ProjectsSection from "@/component/ProjectsSection";
+import ServicesSection from "@/component/ServicesSection";
+import SkillsSection from "@/component/SkillsSection";
+import TechnologyStrip from "@/component/TechnologyStrip";
 
-// import { Button } from "@/components/ui/button";
-import Footer from '@/component/Footer';
-import Header from "@/component/Header";
-// import Image from 'next/image';
-import Projects from "@/component/Projects";
-import Skills from "@/component/Skills";
-import React from "react";
-// import { ThemeToggle } from '@/component/theme-toggle';
 export default function Home() {
   return (
-    <div>
+    <>
+      <AnnouncementBar />
       <Navbar />
-      <Header />
-      <Projects />
-      <Skills />
+      <main>
+        <Hero />
+        <TechnologyStrip />
+        <ServicesSection />
+        <ProjectsSection />
+        <PrinciplesSection />
+        <ProcessSection />
+        <AboutSection />
+        <SkillsSection />
+        <OpportunitySection />
+        <ContactSection />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
