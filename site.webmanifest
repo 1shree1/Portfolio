@@ -1,0 +1,16 @@
+{
+  "name": "Shree Subedi",
+  "short_name": "Shree Subedi",
+  "description": "Fast, responsive, and modern websites by Shree Subedi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#E10600",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
